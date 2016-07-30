@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="Saya" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://yoursite.com/2015/12/28/afnetworking-01-demo_app/"/>
+    <link rel="canonical" href="http://yoursite.com"/>
 
     
     <link rel="author" href="https://www.google.com/+LenboMa"/>
@@ -155,39 +155,29 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <article class="post-container post-container--single">
+            <div class="main-post-list">
+    
+  <ol class="post-list">
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2016/07/30/test-AppDelegate/" title="link to post.title">test AppDelegate</a></h2>
+      <p class="excerpt">
+    
+      AppDelegate设置缓存12NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];[NSURLCache setSharedURLCache:URLCache];
+设置网络访问标示1[[AFNetworkActivityIndicatorManager sharedManager] setEna
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2016-07-30T08:11:06.000Z" class="post-list__meta--date date">2016-07-30</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/07/30/test-AppDelegate/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+  </ol>
 
-  <header class="post-header">
-    <div class="post-meta">
-      <time datetime="2015-12-28T03:27:46.000Z" class="post-list__meta--date date">2015-12-28</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
-    </div>
-    <h1 class="post-title"></h1>
-  </header>
 
-  <section class="post">
-    <h1 id="官方演示程序"><a href="#官方演示程序" class="headerlink" title="官方演示程序"></a>官方演示程序</h1><h2 id="AppDelegate"><a href="#AppDelegate" class="headerlink" title="AppDelegate"></a>AppDelegate</h2><h3 id="设置缓存"><a href="#设置缓存" class="headerlink" title="设置缓存"></a>设置缓存</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSURLCache</span> *URLCache = [[<span class="built_in">NSURLCache</span> alloc] initWithMemoryCapacity:<span class="number">4</span> * <span class="number">1024</span> * <span class="number">1024</span> diskCapacity:<span class="number">20</span> * <span class="number">1024</span> * <span class="number">1024</span> diskPath:<span class="literal">nil</span>];</span><br><span class="line">[<span class="built_in">NSURLCache</span> setSharedURLCache:URLCache];</span><br></pre></td></tr></table></figure>
-<h3 id="设置网络访问标示"><a href="#设置网络访问标示" class="headerlink" title="设置网络访问标示"></a>设置网络访问标示</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[AFNetworkActivityIndicatorManager sharedManager] setEnabled:<span class="literal">YES</span>];</span><br></pre></td></tr></table></figure>
-<h2 id="AFAppDotNetAPIClient"><a href="#AFAppDotNetAPIClient" class="headerlink" title="AFAppDotNetAPIClient"></a><code>AFAppDotNetAPIClient</code></h2><ul>
-<li><p>提供全局网络访问入口</p>
-</li>
-<li><p>.h</p>
-</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AFAppDotNetAPIClient</span> : <span class="title">AFHTTPSessionManager</span></span></span><br><span class="line"></span><br><span class="line">+ (instancetype)sharedClient;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>.m</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="built_in">NSString</span> * <span class="keyword">const</span> AFAppDotNetAPIBaseURLString = <span class="string">@"https://api.app.net/"</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">AFAppDotNetAPIClient</span></span></span><br><span class="line"></span><br><span class="line">+ (instancetype)sharedClient &#123;</span><br><span class="line">    <span class="keyword">static</span> AFAppDotNetAPIClient *_sharedClient = <span class="literal">nil</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken;</span><br><span class="line">    <span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123;</span><br><span class="line">        _sharedClient = [[AFAppDotNetAPIClient alloc] initWithBaseURL:[<span class="built_in">NSURL</span> URLWithString:AFAppDotNetAPIBaseURLString]];</span><br><span class="line">        _sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> _sharedClient;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ol>
-<li>在 <code>AppDelegate</code> 中设置缓存</li>
-<li>在 <code>AppDelegate</code> 中设置网络访问指示器</li>
-<li>继承 <code>AFHTTPSessionManager</code> 创建单例统一管理网络访问</li>
-<li>单例方法中使用了 <code>BaseURL</code>，设置后，再访问该服务器，可以直接使用相对路径</li>
-</ol>
 
-  </section>
-
-</article>
+</div>
 
 
 
