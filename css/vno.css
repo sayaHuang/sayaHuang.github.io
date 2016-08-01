@@ -5799,6 +5799,16 @@ pre .keyword,
 pre .javascript .function {
   color: #c9c;
 }
+#comment {
+  padding: 20px;
+  background: #272822;
+  box-shadow: 1px 2px 3px #ddd;
+  margin-bottom: 50px;
+}
+#comment .title {
+  font-weight: normal;
+  margin-bottom: 15px;
+}
 html,
 body,
 div,
