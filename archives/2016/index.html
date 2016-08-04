@@ -163,6 +163,21 @@ var _hmt = _hmt || [];
   
     
     <li>
+      <h2 class="post-list__post-title post-title"><a href="/2016/08/03/如何处理NSLog/" title="link to post.title">如何处理NSLog</a></h2>
+      <p class="excerpt">
+    
+      ###简单版代码创建并配置好pch文件,并将下列代码copy到文件中
+12345678910#ifdef __OBJC__ //用于判断是否为oc文件#ifdef DEBUG //用于判断是否在debug状态#define YGLog(...) NSLog(__VA_ARGS__)#else#define YGLog(...)#endif //于第二行的if相呼应#endif //于第一行的if相呼应,每个if必须对应一个end
+###增强版代码在控制台输出的时候,可以显示文件名和行数 
+123
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2016-08-03T06:47:54.000Z" class="post-list__meta--date date">2016-08-03</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/03/如何处理NSLog/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
       <h2 class="post-list__post-title post-title"><a href="/2016/07/30/howToPostBlog/" title="link to post.title"></a></h2>
       <p class="excerpt">
     

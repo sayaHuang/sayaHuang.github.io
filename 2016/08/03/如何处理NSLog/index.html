@@ -17,7 +17,7 @@ var _hmt = _hmt || [];
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>Saya | 黄金果</title>
+    <title>如何处理NSLog | Saya</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -28,11 +28,11 @@ var _hmt = _hmt || [];
     <meta name="description" content="喜欢摇滚音乐,爱看惊悚悬疑电影,现居住北京,是一名iOS程序瑗">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Saya | 黄金果">
+    <meta name="twitter:title" content="如何处理NSLog | Saya">
     <meta name="twitter:description" content="喜欢摇滚音乐,爱看惊悚悬疑电影,现居住北京,是一名iOS程序瑗">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Saya | 黄金果">
+    <meta property="og:title" content="如何处理NSLog | Saya">
     <meta property="og:description" content="喜欢摇滚音乐,爱看惊悚悬疑电影,现居住北京,是一名iOS程序瑗">
 
     
@@ -50,7 +50,7 @@ var _hmt = _hmt || [];
     <link rel="alternate" type="application/rss+xml" title="Saya" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://sayaHuang.github.io"/>
+    <link rel="canonical" href="http://sayaHuang.github.io/2016/08/03/如何处理NSLog/"/>
 
     
 </head>
@@ -145,83 +145,44 @@ var _hmt = _hmt || [];
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/08/04/手势-响应时间链条/" title="link to post.title">手势-响应时间链条</a></h2>
-      <p class="excerpt">
-    
-      
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-08-04T04:31:44.000Z" class="post-list__meta--date date">2016-08-04</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/04/手势-响应时间链条/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/08/03/如何处理NSLog/" title="link to post.title">如何处理NSLog</a></h2>
-      <p class="excerpt">
-    
-      ###简单版代码创建并配置好pch文件,并将下列代码copy到文件中
-12345678910#ifdef __OBJC__ //用于判断是否为oc文件#ifdef DEBUG //用于判断是否在debug状态#define YGLog(...) NSLog(__VA_ARGS__)#else#define YGLog(...)#endif //于第二行的if相呼应#endif //于第一行的if相呼应,每个if必须对应一个end
-###增强版代码在控制台输出的时候,可以显示文件名和行数 
-123
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-08-03T06:47:54.000Z" class="post-list__meta--date date">2016-08-03</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/03/如何处理NSLog/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/07/30/howToPostBlog/" title="link to post.title"></a></h2>
-      <p class="excerpt">
-    
-      1.发表一篇博客
+            <article class="post-container post-container--single">
 
-cd到博客所在的本地仓库
-执行hexo new 文章名称
-在source/_posts文件夹中找到.md文件进行编辑
-依次执行hexo clean ==清理
-hexo generate == 生成文章
-hexo deploy == 发布文章
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-08-03T06:47:54.000Z" class="post-list__meta--date date">2016-08-03</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+    </div>
+    <h1 class="post-title">如何处理NSLog</h1>
+  </header>
+
+  <section class="post">
+    <p>###简单版代码<br>创建并配置好pch文件,并将下列代码copy到文件中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#ifdef __OBJC__ //用于判断是否为oc文件</span><br><span class="line"></span><br><span class="line">#ifdef DEBUG //用于判断是否在debug状态</span><br><span class="line">#define YGLog(...) NSLog(__VA_ARGS__)</span><br><span class="line">#else</span><br><span class="line">#define YGLog(...)</span><br><span class="line">#endif //于第二行的if相呼应</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#endif //于第一行的if相呼应,每个if必须对应一个end</span><br></pre></td></tr></table></figure>
+<p>###增强版代码<br>在控制台输出的时候,可以显示<strong>文件名</strong>和<strong>行数 </strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#ifdef __OBJC__</span><br><span class="line"></span><br><span class="line">#ifdef DEBUG</span><br><span class="line">#define NSLog(fmt, ...) NSLog((@&quot;%s [Line %d] &quot; fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)</span><br><span class="line">#else</span><br><span class="line">#define NSLog(...)</span><br><span class="line">#endif</span><br><span class="line"></span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
+
+  </section>
+
+</article>
 
 
-2.博客中如何添加一张图片
-方法一:
-
-在 _config.yml  的 post_asset_folder 已设为 true
-cd到hexo目录下,命令输入“hexo new post  文章名”时都会在source/_posts文
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-07-30T12:04:33.000Z" class="post-list__meta--date date">2016-07-30</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/07/30/howToPostBlog/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/07/30/test-AppDelegate/" title="link to post.title">test AppDelegate</a></h2>
-      <p class="excerpt">
-    
-      AppDelegate设置缓存12NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];[NSURLCache setSharedURLCache:URLCache];
-设置网络访问标示1[[AFNetworkActivityIndicatorManager sharedManager] setEna
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-07-30T08:11:06.000Z" class="post-list__meta--date date">2016-07-30</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/07/30/test-AppDelegate/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
-
-
-
-</div>
-
+<section id="comment">
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key=”2016/08/03/如何处理NSLog/” data-title=”如何处理NSLog” data-url=”http://sayaHuang.github.io/2016/08/03/如何处理NSLog/”></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"sayahuang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</section>
 
 
             <footer class="footer">
