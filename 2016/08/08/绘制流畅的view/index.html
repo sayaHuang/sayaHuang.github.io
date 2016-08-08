@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?bf0da24f4612a06df2c38b4126646444";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</script>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>绘制流畅的view | Saya</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="喜欢摇滚音乐,爱看惊悚悬疑电影,现居住北京,是一名iOS程序瑗">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="绘制流畅的view | Saya">
+    <meta name="twitter:description" content="喜欢摇滚音乐,爱看惊悚悬疑电影,现居住北京,是一名iOS程序瑗">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="绘制流畅的view | Saya">
+    <meta property="og:description" content="喜欢摇滚音乐,爱看惊悚悬疑电影,现居住北京,是一名iOS程序瑗">
+
+    
+    <meta name="author" content="sayaHuang">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="Saya" href="/atom.xml">
+    
+
+    <link rel="canonical" href="http://sayaHuang.github.io/2016/08/08/绘制流畅的view/"/>
+
+    
+</head>
+
+<body class="home-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 Saya 的主页"><img src="/images/logo2.jpg" width="80" alt="Saya logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for Saya">Saya</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">黄金果</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">喜欢摇滚音乐,爱看惊悚悬疑电影,现居住北京,是一名iOS程序瑗</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/projects">项目作品</a></li>
+            
+              <li class="navigation__item"><a href="/aboutme">关于我</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+
+  <!-- Github -->
+  
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+  <li class="navigation__item">
+    <a href="mailto:highgril00@gmail.com" title="邮件联系我" target="_blank">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-blue"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-08-08T07:57:46.000Z" class="post-list__meta--date date">2016-08-08</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+    </div>
+    <h1 class="post-title">绘制流畅的view</h1>
+  </header>
+
+  <section class="post">
+    <blockquote>
+<p>阅读<a href="https://www.objccn.io/issue-3-1/" target="_blank" rel="external">绘制像素到屏幕</a> / <a href="http://www.reviewcode.cn/article.html?reviewId=7" target="_blank" rel="external">关于性能的一些问题</a>文章,所做笔记</p>
+</blockquote>
+<h3 id="为什么图片如果是不透明的，那么最好显示的设置出来"><a href="#为什么图片如果是不透明的，那么最好显示的设置出来" class="headerlink" title="为什么图片如果是不透明的，那么最好显示的设置出来"></a>为什么图片如果是不透明的，那么最好显示的设置出来</h3><p>现在有一个场景是这样子，屏幕上面已经拥有一个纹理铺满整屏，如果此时还有第二个纹理放在第一个纹理之上，然后GPU将会把第二个纹理合成到第一个纹理中，假定俩个纹理对齐，并且使用正常的混合模式，我们便可以使用下面这个公式来计算没一个像素：</p>
+<pre><code>R= S+ D*（1-sa）
+
+结果的颜色 = 源色彩（顶端纹理）+ 目标颜色（低一层的纹理）*（1-源颜色的透明度）
+</code></pre><p>如果显示说明sa 为1（不透明），则可以减少很多计算</p>
+<p>对于layer来说opaque = yes   对于view来说则是 alpha  = 1；</p>
+<h3 id="MASK"><a href="#MASK" class="headerlink" title="MASK"></a>MASK</h3><p>一个图层有一个和它相关联的mask，MASK翻译为蒙版的意思，在渲染的时候可以规定渲染的范围，mask是一个拥有alpha值的位图，当像素要和它下面包含的像素合并之前都会把MASK应用到图层的像素上去。</p>
+<p>例如：当设置一个图层的圆角半径时，可以有效的在图层上面设置一个mask，但是也可以指定 任意蒙版，比如，一个A形状的mask，最终只有在mask中显示出来的才会被渲染出来</p>
+<h3 id="离屏渲染"><a href="#离屏渲染" class="headerlink" title="离屏渲染"></a>离屏渲染</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义:"></a>定义:</h4><p>当屏渲染:on-screen rendering,指的是GPU的渲染操作是在当前用于显示的屏幕缓存区中进行的<br>离屏渲染:off-screen renderding,指的是GPU在当前屏幕缓冲区以外,新开辟一个缓存区进行渲染操作</p>
+<h4 id="为什么要避免离屏渲染"><a href="#为什么要避免离屏渲染" class="headerlink" title="为什么要避免离屏渲染"></a>为什么要避免离屏渲染</h4><p>一般的情况下,你需要避免离屏渲染,因为离屏渲染很消耗性能,因为需要将环境转换到<code>屏幕外缓冲区</code>,将图形渲染完毕之后,在需要显示的时候,需要将渲染结果显示在屏幕上时,则将<code>屏幕外缓冲区</code>转换到<code>帧缓冲区</code></p>
+<h4 id="什么情况下会出现离屏渲染"><a href="#什么情况下会出现离屏渲染" class="headerlink" title="什么情况下会出现离屏渲染"></a>什么情况下会出现离屏渲染</h4><ul>
+<li>Any layer with a mask (layer.mask)</li>
+<li>Any layer with layer.masksToBounds being true</li>
+<li>Any layer with layer.allowsGroupOpacity set to YES and layer.opacity is less than 1.0</li>
+<li>Any layer with a drop shadow (layer.shadow*).</li>
+<li>Any layer with layer.shouldRasterize being true</li>
+<li>Any layer with layer.cornerRadius, layer.edgeAntialiasingMask, layer.allowsEdgeAntialiasing</li>
+</ul>
+<p><strong>总结:</strong>尽量设置layer的Opacity为1,避免使用阴影.如果需要显示圆角图片,数量少的话可以使用离屏渲染,但是如果数量多的话,可以在底下放一个imageView并绘制一个圆角图片显示在imageView上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@implementation UIImage (RoundedCorner)</span><br><span class="line"></span><br><span class="line">- (UIImage *)imageWithRoundedCornersAndSize:(CGSize)sizeToFit andCornerRadius:(CGFloat)radius</span><br><span class="line">&#123;</span><br><span class="line">    CGRect rect = (CGRect)&#123;0.f, 0.f, sizeToFit&#125;;</span><br><span class="line"></span><br><span class="line">    UIGraphicsBeginImageContextWithOptions(sizeToFit, NO, UIScreen.mainScreen.scale);</span><br><span class="line">    CGContextAddPath(UIGraphicsGetCurrentContext(),</span><br><span class="line">                     [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:radius].CGPath);</span><br><span class="line">    CGContextClip(UIGraphicsGetCurrentContext());</span><br><span class="line"></span><br><span class="line">    [self drawInRect:rect];</span><br><span class="line">    UIImage *output = UIGraphicsGetImageFromCurrentImageContext();</span><br><span class="line"></span><br><span class="line">    UIGraphicsEndImageContext();</span><br><span class="line"></span><br><span class="line">    return output;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>也可以通过instrument中的 Core animation 工具 通过<code>Color Offscreen-Rendered Yellow</code>的选项，它会将已经被渲染到屏幕外缓冲区的区域标注为黄色(这个选项在模拟器中也可以用)</p>
+<p><strong>需要注意</strong>:设置Color Hits Green and Misses Red 选项。<code>绿色</code>代表无论何时一个屏幕外缓冲区被复用，而<code>红色</code>代表当缓冲区被重新创建,如果出现绿色则说明缓存区中的内容被有效的利用了,而如果出现红色,则出现重复创建的问题,所以需要想办法避免离屏渲染</p>
+
+  </section>
+
+</article>
+
+
+<section id="comment">
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key=”2016/08/08/绘制流畅的view/” data-title=”绘制流畅的view” data-url=”http://sayaHuang.github.io/2016/08/08/绘制流畅的view/”></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"sayahuang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</section>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">
+        本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2016 - 本站由 <a href="/">@Longbo Ma</a> 创建,
+        使用<a href="https://github.com/lenbo-ma/hexo-theme-vno">hexo-theme-vno</a>主题,
+        修改自<a href="http://github.com/onevcat/vno" target="_blank">Vno</a>
+    </span>
+</footer>
+
+        </div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+
+     
+</body>
+</html>

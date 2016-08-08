@@ -151,6 +151,25 @@ var _hmt = _hmt || [];
   
     
     <li>
+      <h2 class="post-list__post-title post-title"><a href="/2016/08/08/绘制流畅的view/" title="link to post.title">绘制流畅的view</a></h2>
+      <p class="excerpt">
+    
+      
+阅读绘制像素到屏幕 / 关于性能的一些问题文章,所做笔记
+
+为什么图片如果是不透明的，那么最好显示的设置出来现在有一个场景是这样子，屏幕上面已经拥有一个纹理铺满整屏，如果此时还有第二个纹理放在第一个纹理之上，然后GPU将会把第二个纹理合成到第一个纹理中，假定俩个纹理对齐，并且使用正常的混合模式，我们便可以使用下面这个公式来计算没一个像素：
+R= S+ D*（1-sa）
+
+结果的颜色 = 源色彩（顶端纹理）+ 目标颜色（低一层的纹理）*（1-源颜色的透明度）
+如果显示说明sa 为1（不透明），则
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2016-08-08T07:57:46.000Z" class="post-list__meta--date date">2016-08-08</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/08/绘制流畅的view/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
       <h2 class="post-list__post-title post-title"><a href="/2016/08/04/手势-响应时间链条/" title="link to post.title">手势-响应时间链条</a></h2>
       <p class="excerpt">
     
@@ -158,6 +177,32 @@ var _hmt = _hmt || [];
     &hellip;
       </p>
       <div class="post-list__meta"><time datetime="2016-08-04T04:31:44.000Z" class="post-list__meta--date date">2016-08-04</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/04/手势-响应时间链条/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2016/08/03/howToPostBlog/" title="link to post.title">如何处理NSLog</a></h2>
+      <p class="excerpt">
+    
+      1.发表一篇博客
+
+cd到博客所在的本地仓库
+执行hexo new 文章名称
+在source/_posts文件夹中找到.md文件进行编辑
+依次执行hexo clean ==清理
+hexo generate == 生成文章
+hexo deploy == 发布文章
+
+
+2.博客中如何添加一张图片
+方法一:
+
+在 _config.yml  的 post_asset_folder 已设为 true
+cd到hexo目录下,命令输入“hexo new post  文章名”时都会在source/_posts文
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2016-08-03T06:47:54.000Z" class="post-list__meta--date date">2016-08-03</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/03/howToPostBlog/">继续阅读</a></div>
       <hr class="post-list__divider" />
     </li>
   

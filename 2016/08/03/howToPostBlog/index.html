@@ -17,7 +17,7 @@ var _hmt = _hmt || [];
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>Saya | 黄金果</title>
+    <title>如何处理NSLog | Saya</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -28,11 +28,11 @@ var _hmt = _hmt || [];
     <meta name="description" content="喜欢摇滚音乐,爱看惊悚悬疑电影,现居住北京,是一名iOS程序瑗">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Saya | 黄金果">
+    <meta name="twitter:title" content="如何处理NSLog | Saya">
     <meta name="twitter:description" content="喜欢摇滚音乐,爱看惊悚悬疑电影,现居住北京,是一名iOS程序瑗">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Saya | 黄金果">
+    <meta property="og:title" content="如何处理NSLog | Saya">
     <meta property="og:description" content="喜欢摇滚音乐,爱看惊悚悬疑电影,现居住北京,是一名iOS程序瑗">
 
     
@@ -50,7 +50,7 @@ var _hmt = _hmt || [];
     <link rel="alternate" type="application/rss+xml" title="Saya" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://sayaHuang.github.io"/>
+    <link rel="canonical" href="http://sayaHuang.github.io/2016/08/03/howToPostBlog/"/>
 
     
 </head>
@@ -145,102 +145,65 @@ var _hmt = _hmt || [];
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/08/08/绘制流畅的view/" title="link to post.title">绘制流畅的view</a></h2>
-      <p class="excerpt">
-    
-      
-阅读绘制像素到屏幕 / 关于性能的一些问题文章,所做笔记
+            <article class="post-container post-container--single">
 
-为什么图片如果是不透明的，那么最好显示的设置出来现在有一个场景是这样子，屏幕上面已经拥有一个纹理铺满整屏，如果此时还有第二个纹理放在第一个纹理之上，然后GPU将会把第二个纹理合成到第一个纹理中，假定俩个纹理对齐，并且使用正常的混合模式，我们便可以使用下面这个公式来计算没一个像素：
-R= S+ D*（1-sa）
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-08-03T06:47:54.000Z" class="post-list__meta--date date">2016-08-03</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+    </div>
+    <h1 class="post-title">如何处理NSLog</h1>
+  </header>
 
-结果的颜色 = 源色彩（顶端纹理）+ 目标颜色（低一层的纹理）*（1-源颜色的透明度）
-如果显示说明sa 为1（不透明），则
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-08-08T07:57:46.000Z" class="post-list__meta--date date">2016-08-08</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/08/绘制流畅的view/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/08/04/手势-响应时间链条/" title="link to post.title">手势-响应时间链条</a></h2>
-      <p class="excerpt">
-    
-      
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-08-04T04:31:44.000Z" class="post-list__meta--date date">2016-08-04</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/04/手势-响应时间链条/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/08/03/howToPostBlog/" title="link to post.title">如何处理NSLog</a></h2>
-      <p class="excerpt">
-    
-      1.发表一篇博客
+  <section class="post">
+    <p>1.发表一篇博客</p>
+<ul>
+<li>cd到博客所在的本地仓库</li>
+<li>执行hexo new 文章名称</li>
+<li>在source/_posts文件夹中找到.md文件进行编辑</li>
+<li>依次执行hexo clean ==清理</li>
+<li>hexo generate == 生成文章</li>
+<li>hexo deploy == 发布文章</li>
+</ul>
+<img src="/2016/08/03/howToPostBlog/p1.png" alt="图片的地址" title="图片的地址">
+<p>2.博客中如何添加一张图片</p>
+<p>方法一:</p>
+<ol>
+<li>在 _config.yml  的 post_asset_folder 已设为 true</li>
+<li>cd到hexo目录下,命令输入“hexo new post  文章名”时都会在source/_posts文件夹下自动创建这样的一个文件夹,将图片放置到自动创建的文件夹下</li>
+<li><p>编辑文案时使用markDown语句输入图片    </p>
+ 
+</li>
+</ol>
+<p>方法二:    </p>
+<ol>
+<li><p>直接使用markDown语句输入图片</p>
+<p> ! [img caption] (img url) //url一般为网络地址</p>
+</li>
+</ol>
 
-cd到博客所在的本地仓库
-执行hexo new 文章名称
-在source/_posts文件夹中找到.md文件进行编辑
-依次执行hexo clean ==清理
-hexo generate == 生成文章
-hexo deploy == 发布文章
+  </section>
+
+</article>
 
 
-2.博客中如何添加一张图片
-方法一:
-
-在 _config.yml  的 post_asset_folder 已设为 true
-cd到hexo目录下,命令输入“hexo new post  文章名”时都会在source/_posts文
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-08-03T06:47:54.000Z" class="post-list__meta--date date">2016-08-03</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/03/howToPostBlog/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/08/03/如何处理NSLog/" title="link to post.title">如何处理NSLog</a></h2>
-      <p class="excerpt">
-    
-      ###简单版代码创建并配置好pch文件,并将下列代码copy到文件中
-12345678910#ifdef __OBJC__ //用于判断是否为oc文件#ifdef DEBUG //用于判断是否在debug状态#define YGLog(...) NSLog(__VA_ARGS__)#else#define YGLog(...)#endif //于第二行的if相呼应#endif //于第一行的if相呼应,每个if必须对应一个end
-###增强版代码在控制台输出的时候,可以显示文件名和行数 
-123
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-08-03T06:47:54.000Z" class="post-list__meta--date date">2016-08-03</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/03/如何处理NSLog/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/07/30/test-AppDelegate/" title="link to post.title">test AppDelegate</a></h2>
-      <p class="excerpt">
-    
-      AppDelegate设置缓存12NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];[NSURLCache setSharedURLCache:URLCache];
-设置网络访问标示1[[AFNetworkActivityIndicatorManager sharedManager] setEna
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-07-30T08:11:06.000Z" class="post-list__meta--date date">2016-07-30</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/07/30/test-AppDelegate/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
-
-
-
-</div>
-
+<section id="comment">
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key=”2016/08/03/howToPostBlog/” data-title=”如何处理NSLog” data-url=”http://sayaHuang.github.io/2016/08/03/howToPostBlog/”></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"sayahuang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</section>
 
 
             <footer class="footer">
